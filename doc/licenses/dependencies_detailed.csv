@@ -1,0 +1,122 @@
+activesupport,4.1.4,MIT,A toolkit of support libraries and Ruby core extensions extracted from the Rails framework.,"A toolkit of support libraries and Ruby core extensions extracted from the Rails framework. Rich support for multibyte strings, internationalization, time zones, and testing."
+bundler,1.6.5,MIT,The best way to manage your application's dependencies,"Bundler manages an application's dependencies through its entire life, across many machines, systematically and repeatably"
+capybara,2.4.1,MIT,"Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb",Capybara is an integration testing tool for rack based web applications. It simulates how a user would interact with a website
+cliver,0.3.2,MIT,Cross-platform version constraints for cli tools,Assertions for command-line dependencies
+fedux_org-stdlib,0.6.51,MIT,Collection of useful libraries. It maybe depend on external libraries.,""
+ffi,1.9.3,BSD,Ruby FFI,Ruby FFI library
+highline,1.6.21,ruby,HighLine is a high-level command-line IO library.,"A high-level IO library that provides validation, type conversion, and more for
+command-line interfaces. HighLine also includes a complete menu system that can
+crank out anything from simple list selection to complete shells with just
+minutes of work."
+i18n,0.6.11,MIT,New wave Internationalization support for Ruby,New wave Internationalization support for Ruby.
+json,1.8.1,other,This json is bundled with Ruby,""
+levenshtein-ffi,1.1.0,BSD 2-Clause,An FFI version of the levenshtein gem.,"Provides a fast, cross-Ruby implementation of the levenshtein distance algorithm."
+mime-types,2.3,"multiple licenses: MIT, Artistic 2.0, GPL-2",The mime-types library provides a library and registry for information about MIME content type definitions,"The mime-types library provides a library and registry for information about
+MIME content type definitions. It can be used to determine defined filename
+extensions for MIME types, or to use filename extensions to look up the likely
+MIME type definitions.
+
+MIME content types are used in MIME-compliant communications, as in e-mail or
+HTTP traffic, to indicate the type of content which is transmitted. The
+mime-types library provides the ability for detailed information about MIME
+entities (provided as an enumerable collection of MIME::Type objects) to be
+determined and used programmatically. There are many types defined by RFCs and
+vendors, so the list is long but by definition incomplete; don't hesitate to to
+add additional type definitions (see Contributing.rdoc). The primary sources
+for MIME type definitions found in mime-types is the IANA collection of
+registrations (see below for the link), RFCs, and W3C recommendations.
+
+This is release 2.2, mostly changing how the MIME type registry is updated from
+the IANA registry (the format of which was incompatibly changed shortly before
+this release) and taking advantage of the extra data available from IANA
+registry in the form of MIME::Type#xrefs. In addition, the {LTSW
+list}[http://www.ltsw.se/knbase/internet/mime.htp] has been dropped as a
+supported list.
+
+As a reminder, mime-types 2.x is no longer compatible with Ruby 1.8 and
+mime-types 1.x is only being maintained for security issues. No new MIME types
+or features will be added.
+
+mime-types (previously called MIME::Types for Ruby) was originally based on
+MIME::Types for Perl by Mark Overmeer, copyright 2001 - 2009. It is built to
+conform to the MIME types of RFCs 2045 and 2231. It tracks the {IANA Media
+Types registry}[https://www.iana.org/assignments/media-types/media-types.xhtml]
+with some types added by the users of mime-types."
+mini_portile,0.6.0,MIT,Simplistic port-like solution for developers,Simplistic port-like solution for developers. It provides a standard and simplified way to compile against dependency libraries without messing up your system.
+minitest,5.4.0,MIT,"minitest provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking","minitest provides a complete suite of testing facilities supporting
+TDD, BDD, mocking, and benchmarking.
+
+    ""I had a class with Jim Weirich on testing last week and we were
+     allowed to choose our testing frameworks. Kirk Haines and I were
+     paired up and we cracked open the code for a few test
+     frameworks...
+
+     I MUST say that minitest is *very* readable / understandable
+     compared to the 'other two' options we looked at. Nicely done and
+     thank you for helping us keep our mental sanity.""
+
+    -- Wayne E. Seguin
+
+minitest/unit is a small and incredibly fast unit testing framework.
+It provides a rich set of assertions to make your tests clean and
+readable.
+
+minitest/spec is a functionally complete spec engine. It hooks onto
+minitest/unit and seamlessly bridges test assertions over to spec
+expectations.
+
+minitest/benchmark is an awesome way to assert the performance of your
+algorithms in a repeatable manner. Now you can assert that your newb
+co-worker doesn't replace your linear algorithm with an exponential
+one!
+
+minitest/mock by Steven Baker, is a beautifully tiny mock (and stub)
+object framework.
+
+minitest/pride shows pride in testing and adds coloring to your test
+output. I guess it is an example of how to write IO pipes too. :P
+
+minitest/unit is meant to have a clean implementation for language
+implementors that need a minimal set of methods to bootstrap a working
+test suite. For example, there is no magic involved for test-case
+discovery.
+
+    ""Again, I can't praise enough the idea of a testing/specing
+     framework that I can actually read in full in one sitting!""
+
+    -- Piotr Szotkowski
+
+Comparing to rspec:
+
+    rspec is a testing DSL. minitest is ruby.
+
+    -- Adam Hawkins, ""Bow Before MiniTest""
+
+minitest doesn't reinvent anything that ruby already provides, like:
+classes, modules, inheritance, methods. This means you only have to
+learn ruby to use minitest and all of your regular OO practices like
+extract-method refactorings still apply."
+multi_json,1.10.1,MIT,A common interface to multiple JSON libraries.,"A common interface to multiple JSON libraries, including Oj, Yajl, the JSON gem (with C-extensions), the pure-Ruby JSON gem, NSJSONSerialization, gson.rb, JrJackson, and OkJson."
+nokogiri,1.6.3.1,MIT,"Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser","Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser.  Among Nokogiri's
+many features is the ability to search documents via XPath or CSS3 selectors.
+
+XML is like violence - if it doesn’t solve your problems, you are not using
+enough of it."
+password_changer,0.0.1,MIT,Change password,""
+poltergeist,1.5.1,MIT,PhantomJS driver for Capybara,"Poltergeist is a driver for Capybara that allows you to run your tests on a headless WebKit browser, provided by PhantomJS."
+rack,1.5.2,MIT,a modular Ruby webserver interface,"Rack provides a minimal, modular and adaptable interface for developing
+web applications in Ruby.  By wrapping HTTP requests and responses in
+the simplest way possible, it unifies and distills the API for web
+servers, web frameworks, and software in between (the so-called
+middleware) into a single method call.
+
+Also see http://rack.github.com/."
+rack-test,0.6.2,MIT,Simple testing API built on Rack,"Rack::Test is a small, simple testing API for Rack apps. It can be used on its
+own or as a reusable starting point for Web frameworks and testing libraries
+to build on. Most of its initial functionality is an extraction of Merb 1.0's
+request helpers feature."
+thor,0.19.1,MIT,Thor is a toolkit for building powerful command-line interfaces.,Thor is a toolkit for building powerful command-line interfaces.
+thread_safe,0.3.4,Apache 2.0,A collection of data structures and utilities to make thread-safe programming in Ruby easier,Thread-safe collections and utilities for Ruby
+tzinfo,1.2.2,MIT,Daylight savings aware timezone library,TZInfo provides daylight savings aware transformations between times in different time zones.
+websocket-driver,0.3.4,MIT,WebSocket protocol handler with pluggable I/O,""
+xpath,2.0.0,MIT,Generate XPath expressions from Ruby,XPath is a Ruby DSL for generating XPath expressions

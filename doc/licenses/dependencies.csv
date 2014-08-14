@@ -1,0 +1,24 @@
+activesupport, 4.1.4, MIT
+bundler, 1.6.5, MIT
+capybara, 2.4.1, MIT
+cliver, 0.3.2, MIT
+fedux_org-stdlib, 0.6.51, MIT
+ffi, 1.9.3, BSD
+highline, 1.6.21, ruby
+i18n, 0.6.11, MIT
+json, 1.8.1, other
+levenshtein-ffi, 1.1.0, BSD 2-Clause
+mime-types, 2.3, multiple licenses: MIT, Artistic 2.0, GPL-2
+mini_portile, 0.6.0, MIT
+minitest, 5.4.0, MIT
+multi_json, 1.10.1, MIT
+nokogiri, 1.6.3.1, MIT
+password_changer, 0.0.1, MIT
+poltergeist, 1.5.1, MIT
+rack, 1.5.2, MIT
+rack-test, 0.6.2, MIT
+thor, 0.19.1, MIT
+thread_safe, 0.3.4, Apache 2.0
+tzinfo, 1.2.2, MIT
+websocket-driver, 0.3.4, MIT
+xpath, 2.0.0, MIT
