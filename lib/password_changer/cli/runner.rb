@@ -9,7 +9,7 @@ module PasswordChanger
       option :user, default: PasswordChanger.config.user, desc: 'Change password for user' 
       option :ask_new_password, type: :boolean, default: PasswordChanger.config.ask_new_password, desc: 'Ask for new password' 
       option :output_format, type: :array, default: PasswordChanger.config.output_format, desc: 'Output format for changed users' 
-      option :show_screenshot_on_error, default: PasswordChanger.config.show_screenshot_on_error, desc: 'Show a screenshot on error'
+      option :show_screenshot_on_error, type: :boolean, default: PasswordChanger.config.show_screenshot_on_error, desc: 'Show a screenshot on error'
       desc 'start', 'Start password change'
       def start
         PasswordChanger.load_plugins
