@@ -3,12 +3,12 @@ module PasswordChanger
     class ChangePassword
       private
 
-      attr_reader :changer, :formatter
+      attr_reader :changer, :printer
 
       public
 
-      def initialize(printer)
-        @changer = Changer.new
+      def initialize(printer, changer)
+        @changer = changer
         @printer = printer
       end
 

@@ -27,7 +27,6 @@ require 'password_changer/printers/pretty'
 require 'password_changer/readers/csv'
 require 'password_changer/readers/single_user'
 
-require 'password_changer/helpers'
 require 'password_changer/password_generator'
 require 'password_changer/user'
 

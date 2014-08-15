@@ -8,7 +8,8 @@ module PasswordChanger
       option :csv_file, default: PasswordChanger.config.csv_file, desc: 'Load users and passwords from csv file'
       option :user, default: PasswordChanger.config.user, desc: 'Change password for user' 
       option :ask_new_password, type: :boolean, default: PasswordChanger.config.ask_new_password, desc: 'Ask for new password' 
-      option :format, default: PasswordChanger.config.format, desc: 'Output format for changed users' 
+      option :output_format, default: PasswordChanger.config.output_format, desc: 'Output format for changed users' 
+      option :show_screenshot_on_error, default: PasswordChanger.config.show_screenshot_on_error, desc: 'Show a screenshot on error'
       desc 'start', 'Start password change'
       def start
         PasswordChanger.load_plugins
@@ -26,15 +27,17 @@ module PasswordChanger
                  fail ArgumentError, 'Please use either `--csv-file`- or `--user`-option.'
                end
 
-        printer = if options[:format].to_sym == :csv
-                    Printer::Csv.new
-                  elsif options[:format].to_sym == :pretty
-                    Printer::Pretty.new
+        printer = if options[:output_format].to_sym == :csv
+                    Printers::Csv.new
+                  elsif options[:output_format].to_sym == :pretty
+                    Printers::Pretty.new
                   else
                     fail ArgumentError, 'Please use either "csv" or "pretty" as output format.'
                   end
 
-        Actions::ChangePassword.new(printer).run(data)
+        changer = Changer.new(show_screenshot_on_error: options[:show_screenshot_on_error])
+
+        Actions::ChangePassword.new(printer, changer).run(data)
       end
 
       default_command :start
