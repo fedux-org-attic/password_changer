@@ -17,8 +17,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'levenshtein-ffi'
-  spec.add_runtime_dependency 'capybara'
-  spec.add_runtime_dependency 'poltergeist'
   spec.add_runtime_dependency 'thor'
   spec.add_runtime_dependency 'highline'
   spec.add_runtime_dependency 'i18n'

@@ -5,7 +5,7 @@ module PasswordChanger
       loop do
         new_password = generate_string(length)
 
-        return new_password if is_totally_different?(old_password, new_password) && includes_number?(new_password)
+        return new_password if is_totally_different?(old_password, new_password) && includes_number?(new_password) && has_no_doubled_letters?(new_password)
       end
     end
 
@@ -15,6 +15,12 @@ module PasswordChanger
       max_length = [string1, string2].max_by { |x| x.length }.length
 
       Levenshtein.distance(string1, string2) >= max_length
+    end
+
+    def has_no_doubled_letters?(string)
+      result = (/(.)\1/ === string)
+
+      !result
     end
 
     def includes_number?(string)

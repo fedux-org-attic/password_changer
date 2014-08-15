@@ -4,8 +4,10 @@ module PasswordChanger
     # Build data array from csv file
     class Csv
       def parse(file)
+        data = File.readlines(file).delete_if { |l| /^#/ === l }
+
         csv = CSV.new(
-          File.read(file), 
+          data.join,
           headers: true, 
           header_converters: :symbol, 
           converters: [:all ]

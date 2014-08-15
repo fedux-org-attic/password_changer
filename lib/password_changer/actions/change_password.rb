@@ -3,12 +3,13 @@ module PasswordChanger
     class ChangePassword
       private
 
-      attr_reader :changer
+      attr_reader :changer, :formatter
 
       public
 
-      def initialize
+      def initialize(printer)
         @changer = Changer.new
+        @printer = printer
       end
 
       def run(*data)
@@ -22,6 +23,8 @@ module PasswordChanger
         end
 
         users.each { |u| changer.change(u) }
+
+        printer.output users
       end
     end
   end

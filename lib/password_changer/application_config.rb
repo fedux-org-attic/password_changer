@@ -6,6 +6,7 @@ module PasswordChanger
     option :debug_mode, false
     option :user, nil
     option :ask_new_password, false
+    #option :format, 'csv'
 
     private
 

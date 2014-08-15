@@ -16,6 +16,7 @@ group :development, :test do
   gem 'versionomy', require: false
   gem 'activesupport', require: false
   gem 'awesome_print', require: 'ap'
+  gem 'launchy'
 
   gem 'mutant'
   gem 'mutant-rspec'
@@ -37,4 +38,6 @@ group :development, :test do
   gem 'filegen', require: false
   gem 'travis-lint', require: false
   gem 'command_exec', require: false
+
+  gem 'password_changer-gad', path: File.expand_path('../../password_changer-gad', __FILE__) 
 end

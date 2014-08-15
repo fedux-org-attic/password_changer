@@ -5,7 +5,7 @@ module PasswordChanger
   @config         = ApplicationConfig.new
   @debug_mode     = false
   @plugin_manager = PluginManager.new
-  @plugin_prefix  = Regexp.new("^#{self.name.downcase.underscore}-")
+  @plugin_prefix  = Regexp.new("^#{self.name.underscore.gsub(/\//, '-')}-")
 
   class << self
     attr_reader :logger, :config, :plugin_manager, :plugin_prefix

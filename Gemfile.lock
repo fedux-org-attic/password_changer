@@ -12,13 +12,20 @@ PATH
   remote: .
   specs:
     password_changer (0.0.1)
-      capybara
       fedux_org-stdlib (>= 0.6.50)
       highline
       i18n
       levenshtein-ffi
-      poltergeist
       thor
+
+PATH
+  remote: ../password_changer-gad
+  specs:
+    password_changer-gad (0.0.1)
+      capybara
+      capybara-webkit
+      password_changer
+      poltergeist
 
 GEM
   remote: https://rubygems.org/
@@ -33,6 +40,7 @@ GEM
     adamantium (0.2.0)
       ice_nine (~> 0.11.0)
       memoizable (~> 0.4.0)
+    addressable (2.3.6)
     anima (0.2.0)
       abstract_type (~> 0.0.7)
       adamantium (~> 0.1)
@@ -50,6 +58,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-webkit (1.1.0)
+      capybara (~> 2.0, >= 2.0.2)
+      json
     childprocess (0.5.3)
       ffi (~> 1.0, >= 1.0.11)
     cliver (0.3.2)
@@ -82,7 +93,7 @@ GEM
     dotenv-deployment (0.0.2)
     equalizer (0.0.9)
     erubis (2.7.0)
-    fedux_org-stdlib (0.6.52)
+    fedux_org-stdlib (0.6.54)
       activesupport
     ffi (1.9.3)
     filegen (0.4.3)
@@ -110,6 +121,8 @@ GEM
       yard (~> 0.8.7)
     inflecto (0.0.2)
     json (1.8.1)
+    launchy (2.4.2)
+      addressable (~> 2.3)
     levenshtein-ffi (1.1.0)
       ffi (~> 1.9)
     license_finder (1.1.1)
@@ -265,10 +278,12 @@ DEPENDENCIES
   fuubar
   github-markup
   inch
+  launchy
   license_finder
   mutant
   mutant-rspec
   password_changer!
+  password_changer-gad!
   pry
   pry-byebug
   pry-doc
