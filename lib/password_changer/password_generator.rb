@@ -24,7 +24,7 @@ module PasswordChanger
     end
 
     def includes_number?(string)
-      string.split(//).any? { |c| (0..9).include? c.to_i }
+      !(string.split(//) & (0..9).map(&:to_s)).blank?
     end
 
     def generate_string(length)

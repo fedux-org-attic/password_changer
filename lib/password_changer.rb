@@ -23,6 +23,7 @@ require 'password_changer/plugin_checker'
 
 require 'password_changer/printers/csv'
 require 'password_changer/printers/pretty'
+require 'password_changer/printers/plain'
 
 require 'password_changer/readers/csv'
 require 'password_changer/readers/single_user'

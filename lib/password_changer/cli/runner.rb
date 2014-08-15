@@ -27,10 +27,13 @@ module PasswordChanger
                  fail ArgumentError, 'Please use either `--csv-file`- or `--user`-option.'
                end
 
-        printer = if options[:output_format].to_sym == :csv
+        printer = case options[:output_format].to_sym
+                  when :csv
                     Printers::Csv.new
-                  elsif options[:output_format].to_sym == :pretty
+                  when :pretty
                     Printers::Pretty.new
+                  when :plain
+                    Printers::Plain.new
                   else
                     fail ArgumentError, 'Please use either "csv" or "pretty" as output format.'
                   end
