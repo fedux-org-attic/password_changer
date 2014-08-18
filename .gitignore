@@ -31,3 +31,5 @@ pkg/
 
 doc/yard/
 .yardoc
+
+Gemfile.local

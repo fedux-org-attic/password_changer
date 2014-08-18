@@ -42,3 +42,5 @@ group :development, :test do
 
   gem 'password_changer-test', path: File.expand_path('../fixtures/password_changer-test', __FILE__) 
 end
+
+eval File.read('Gemfile.local') if File.file? 'Gemfile.local'
