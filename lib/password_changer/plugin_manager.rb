@@ -1,6 +1,6 @@
 # encoding: utf-8
 module PasswordChanger
-  class PluginManager < FeduxOrgStdlib::Plugins::PluginManager
+  class PluginManager < FeduxOrgStdlib::GemPlugins::PluginManager
   end
 end
 
