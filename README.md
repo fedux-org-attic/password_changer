@@ -99,7 +99,7 @@ module PasswordChanger
 
     public
 
-    def initialize(website: 'https://password-portal.example.com/', show_screenshot_on_error: true)
+    def initialize(website: 'https://password-portal.example.com/', show_screenshot_on_error: true, viewer_command: 'xdg-open')
       @website                  = website
       @show_screenshot_on_error = show_screenshot_on_error
 
@@ -272,6 +272,18 @@ If you want to change the password for a single user, you can advise
 ```
 pc --user --ask-new-password
 ```
+
+
+
+## Configuration
+
+<a name="configuration"></a>
+
+`password_changer` will try to find its configuration file at different places:
+
+1. User local: `~/.config/password_changer/application.yaml`, `~/.password_changer/application.yaml`
+2. System local: `/etc/password_changer/application.yaml`
+
 
 ## Whats next
 

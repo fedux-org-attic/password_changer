@@ -12,6 +12,7 @@ group :development, :test do
   gem 'cucumber', require: false
   gem 'aruba', require: false #, git: 'https://github.com/dg-vrnetze/aruba.git', branch: 'integration/expand_path'
   gem 'bundler', require: false
+  gem 'rake', require: false
   gem 'erubis'
   gem 'versionomy', require: false
   gem 'activesupport', require: false
@@ -39,5 +40,5 @@ group :development, :test do
   gem 'travis-lint', require: false
   gem 'command_exec', require: false
 
-  gem 'password_changer-gad', path: File.expand_path('../../password_changer-gad', __FILE__) 
+  gem 'password_changer-test', path: File.expand_path('../fixtures/password_changer-test', __FILE__) 
 end

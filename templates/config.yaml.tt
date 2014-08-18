@@ -1,0 +1,9 @@
+# password_changer version <%= @version %>
+---
+<% @config.known_options.sort.each do |field| -%>
+<% if @config.public_send(field).nil? -%>
+# <%= field %>:
+<% else -%>
+# <%= field %>: <%= @config.public_send field %>
+<% end -%>
+<% end -%>

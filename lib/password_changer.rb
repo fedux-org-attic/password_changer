@@ -33,6 +33,8 @@ require 'password_changer/user'
 
 require 'password_changer/actions/change_password'
 
+require 'password_changer/cli/show'
+require 'password_changer/cli/init'
 require 'password_changer/cli/runner'
 
 

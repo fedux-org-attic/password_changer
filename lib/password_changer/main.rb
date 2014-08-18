@@ -4,7 +4,7 @@ module PasswordChanger
   @logger         = Logger.new
   @config         = ApplicationConfig.new
   @debug_mode     = false
-  @plugin_manager = PluginManager.new
+  @plugin_manager = PluginManager.new(whitelist: @config.plugin_whitelist, blacklist: @config.plugin_blacklist)
 
   class << self
     attr_reader :logger, :config, :plugin_manager, :plugin_prefix
