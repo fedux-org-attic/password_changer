@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    password_changer (0.0.2)
+    password_changer (0.0.3)
       fedux_org-stdlib (>= 0.6.50)
       highline
       i18n
