@@ -22,7 +22,10 @@ module PasswordChanger
           User.new(**d)
         end
 
-        users.each { |u| changer.change(u) }
+        users.each do |u| 
+          PasswordChanger.logger.info "Changing user \"#{u.name}\"."
+          changer.change(u)
+        end
 
         printers.each { |p| p.output users }
       end
