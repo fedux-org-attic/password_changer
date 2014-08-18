@@ -1,4 +1,4 @@
-# PasswordChanger
+# The password changer
 
 The `password_changer` helps you to change passwords for multiple users in an
 easy fashion.
@@ -37,7 +37,7 @@ The bundler provides a helper to generate the basic structure of a gem.
 gem install bundler
 ```
 
-*Create gem*
+*Create gem skeleton*
 
 ```
 # general usage
@@ -45,6 +45,42 @@ bundle gem password_changer-<plugin_name>
 
 # example
 bundle gem password_changer-product_xyz
+```
+
+*Add dependencies to gemspec*
+
+Now add all needed dependencies to your `*.gemspec`.
+
+```
+# Must
+spec.add_dependency 'password_changer'
+
+# Depends on your Changer.rb
+spec.add_runtime_dependency 'capybara'
+spec.add_runtime_dependency 'capybara-webkit'
+spec.add_runtime_dependency 'poltergeist'
+```
+
+*Require dependencies*
+
+And require those dependencies in your project.rb-file
+
+`password_changer-product_xyz/lib/password_changer-product_xyz.rb`:
+
+```
+# Examples
+require 'capybara/dsl'
+require 'capybara/poltergeist'
+```
+
+*Require changer.rb*
+
+And add your `changer.rb`-file as well
+
+`password_changer-product_xyz/lib/password_changer-product_xyz.rb`:
+
+```
+require 'password_changer-product_xyz/changer'
 ```
 
 *Create class*
@@ -77,6 +113,8 @@ module PasswordChanger
 
       Capybara.default_driver = :poltergeist
 
+      # Delete proxy ENV-variables if your
+      # password portal is directly accessible
       %w(http_proxy https_proxy).each do |p|
         ENV.delete p
         ENV.delete p.upcase
@@ -125,14 +163,6 @@ module PasswordChanger
     end
   end
 end
-```
-
-*Require class*
-
-`password_changer-product_xyz/lib/password_changer-product_xyz.rb`:
-
-```ruby
-require 'password_changer-product_xyz/changer
 ```
 
 *Install gem* or *Publish gem*
@@ -242,6 +272,10 @@ If you want to change the password for a single user, you can advise
 ```
 pc --user --ask-new-password
 ```
+
+## Whats next
+
+* Improve test suite a lot
 
 ## Contributing
 
