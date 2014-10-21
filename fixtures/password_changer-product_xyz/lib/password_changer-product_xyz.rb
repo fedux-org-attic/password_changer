@@ -1,4 +1,4 @@
-require "password_changer/product_xyz/version"
+require "password_changer-product_xyz/version"
 
 module PasswordChanger
   module ProductXyz

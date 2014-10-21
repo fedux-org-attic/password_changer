@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'password_changer/product_xyz/version'
+require 'password_changer-product_xyz/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'password_changer-product_xyz'
