@@ -9,8 +9,7 @@ module PasswordChanger
     option :output_format, %w(csv)
     option :show_screenshot_on_error, true
     option :viewer_command, 'xdg-open'
-    option :plugin_whitelist, []
-    option :plugin_blacklist, []
+    option :plugins, []
 
     private
 

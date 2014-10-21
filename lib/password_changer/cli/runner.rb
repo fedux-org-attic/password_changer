@@ -19,7 +19,7 @@ module PasswordChanger
       option :viewer_command, default: PasswordChanger.config.viewer_command, desc: 'Command to show screenshot'
       desc 'start', 'Start password change'
       def start
-        PasswordChanger.load_plugins
+        PasswordChanger.plugin_manager.activate_plugin(*PasswordChanger.config.plugins)
 
         PasswordChanger.enable_debug_mode   if options[:debug_mode]
         PasswordChanger.enable_verbose_mode if options[:verbose]

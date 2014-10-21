@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'thor'
   spec.add_runtime_dependency 'highline'
   spec.add_runtime_dependency 'i18n'
+  spec.add_runtime_dependency 'hirb'
 
   spec.add_dependency 'fedux_org-stdlib', '>= 0.6.50'
 end
